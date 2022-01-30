@@ -1,6 +1,6 @@
 <div align="center"><h1>React-Flowfield</h1></div>
 
-![flowfieldPicture](example\pictures\flowfield.png 'head-img')
+![flowfieldPicture](example/pictures/flowfield.png 'head-img')
 
 React-flowfield is a background component for react, it will give you a highly customizable component to make very creative backgrounds.
 
@@ -60,7 +60,7 @@ const Component = () => {
 
 The example above will create this effect:
 
-![flowfieldGif](example\pictures\FlowFieldGif.gif 'Gif')
+![flowfieldGif](example/pictures/FlowFieldGif.gif 'Gif')
 
 ## Contributing
 
