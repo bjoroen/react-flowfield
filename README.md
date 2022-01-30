@@ -60,7 +60,7 @@ const Component = () => {
 
 The example above will create this effect:
 
-![flowfieldGif](example\pictures\FlowFieldGif.gif 'Gif')
+![flowfieldGif](example/pictures/FlowFieldGif.gif 'Gif')
 
 ## Contributing
 
