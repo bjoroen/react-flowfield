@@ -62,7 +62,7 @@ The example above will create this effect:
 
 ![flowfieldGif](example/pictures/FlowFieldGif.gif 'Gif')
 
-###Props
+### Props
 
 ```tsx
 //Length of animation, takes Number. The longer it last, the more the screen will be coverd. The default is 4000.
