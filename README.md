@@ -22,7 +22,7 @@ yarn add react-flowfield
 
 ## Usage
 
-It works straight out the box, and will give you a white background with black particals as defualt. You can change the color of the particals and the background with props.
+It works straight out the box, and will give you a white background with black particals as default. You can change the color of the particals and the background with props.
 
 The background component will fill the parent component, it uses a html canvas. To place elements ontop of the background, the elements needs to have Position set to absolute.
 

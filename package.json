@@ -37,6 +37,10 @@
   },
   "name": "react-flowfield",
   "author": "bjoroen",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bjoroen/react-flowfield"
+  },
   "module": "dist/crative-react-components-lib.esm.js",
   "size-limit": [
     {
