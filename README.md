@@ -26,7 +26,7 @@ It works straight out the box, and will give you a white background with black p
 
 The background component will fill the parent component, it uses a html canvas. To place elements ontop of the background, the elements needs to have Position set to absolute.
 
-```ts
+```tsx
 import react from 'react';
 
 const Component = () => {
@@ -61,6 +61,27 @@ const Component = () => {
 The example above will create this effect:
 
 ![flowfieldGif](example/pictures/FlowFieldGif.gif 'Gif')
+
+###Props
+
+```tsx
+//Length of animation, takes Number. The longer it last, the more the screen will be coverd. The default is 4000.
+<FlowField lengthOfAnimation={number} />
+
+//Number of particals, the more particals, the faster the screen gets coverd. default is 2000.
+<FlowField numberOfParticals={number} />
+
+//backgroundColor, takes and object. The default background color of the canvas.
+<FlowField backgroundColor={R: number, G: number, B: number, A: number} />
+
+//The color of the particals, will change the color of the pattern.
+<FlowField particalColor={R: number, G: number, B: number, A: number} />
+
+//Also takes style, class and id.
+<FlowField style={{CSS}} className={"string"} id={"string"} />
+
+
+```
 
 ## Contributing
 
