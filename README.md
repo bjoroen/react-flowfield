@@ -65,16 +65,20 @@ The example above will create this effect:
 ### Props
 
 ```tsx
-//Length of animation, takes Number. The longer it last, the more the screen will be coverd. The default is 4000.
+//Length of animation, takes Number. The longer it last, the more the screen will be coverd.
+//The default is 4000.
 <FlowField lengthOfAnimation={number} />
 
-//Number of particals, the more particals, the faster the screen gets coverd. default is 2000.
+//Number of particals, the more particals, the faster the screen gets coverd.
+//The default is 2000.
 <FlowField numberOfParticals={number} />
 
 //backgroundColor, takes and object. The default background color of the canvas.
+//Each take a number between 0-255.
 <FlowField backgroundColor={R: number, G: number, B: number, A: number} />
 
 //The color of the particals, will change the color of the pattern.
+//Each take a number between 0-255
 <FlowField particalColor={R: number, G: number, B: number, A: number} />
 
 //Also takes style, class and id.
