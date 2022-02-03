@@ -21,7 +21,7 @@ const FlowField: React.FC<ComponentProps> = ({
   numberOfParticals = 2000,
   backgroundColor = { R: 255, G: 255, B: 255, A: 255 },
   particalColor = { R: 0, G: 0, B: 0, A: 10 },
-}: ComponentProps) => {
+}: ComponentProps): JSX.Element => {
   const p5Sketch = useRef<HTMLDivElement | null>(null);
 
   let s = (p5: p5) => {
