@@ -9,10 +9,7 @@ export interface RGBA {
   A: number;
 }
 
-interface ComponentProps {
-  style?: React.CSSProperties;
-  className?: string;
-  id?: string;
+interface ComponentProps extends React.HTMLAttributes<HTMLCanvasElement> {
   lengthOfAnimation?: number;
   numberOfParticals?: number;
   particalColor?: RGBA;
@@ -20,15 +17,12 @@ interface ComponentProps {
 }
 
 const FlowField: React.FC<ComponentProps> = ({
-  style,
-  className = '',
-  id = '',
   lengthOfAnimation = 4000,
   numberOfParticals = 2000,
   backgroundColor = { R: 255, G: 255, B: 255, A: 255 },
   particalColor = { R: 0, G: 0, B: 0, A: 10 },
 }: ComponentProps) => {
-  const p5Sketch = useRef<HTMLDivElement>(null);
+  const p5Sketch = useRef<HTMLDivElement | null>(null);
 
   let s = (p5: p5) => {
     const scl = 10;
@@ -40,8 +34,7 @@ const FlowField: React.FC<ComponentProps> = ({
     let zoff: number = 0;
     let numberOfItterations: number = 0;
     let partical: Partical[] = [];
-    //TODO: Fix Any type - Vector? Number?
-    let flowfield: any[];
+    let flowfield: Vector[];
 
     p5.setup = () => {
       if (height && width) p5.createCanvas(width, height);
@@ -101,7 +94,7 @@ const FlowField: React.FC<ComponentProps> = ({
     if (p5Sketch.current) new p5(s, p5Sketch.current);
   }, [p5Sketch.current]);
 
-  return <div style={style} id={id} className={className} ref={p5Sketch} />;
+  return <div ref={p5Sketch} />;
 };
 
 export { FlowField };
