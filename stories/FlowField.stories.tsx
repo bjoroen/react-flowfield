@@ -1,6 +1,6 @@
 import React from 'react';
 import { Meta } from '@storybook/react';
-import { FlowField } from '../src/FlowField/FlowField';
+import { FlowField } from '../src/FlowField';
 
 const meta: Meta = {
   title: 'FlowField',

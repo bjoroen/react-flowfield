@@ -1,8 +1,8 @@
 import { Vector } from 'p5';
 import p5 from 'p5';
-import { RGBA } from './FlowField';
+import { RGBA } from '.';
 
-class Partical {
+export default class Partical {
   p5: p5;
   pos: Vector;
   vel: Vector;
@@ -78,5 +78,3 @@ class Partical {
     }
   }
 }
-
-export { Partical };

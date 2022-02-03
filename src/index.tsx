@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import p5, { Vector } from 'p5';
-import { Partical } from './Partical';
+import Partical from './Partical';
 
 export interface RGBA {
   R: number;
@@ -21,7 +21,7 @@ const FlowField: React.FC<ComponentProps> = ({
   numberOfParticals = 2000,
   backgroundColor = { R: 255, G: 255, B: 255, A: 255 },
   particalColor = { R: 0, G: 0, B: 0, A: 10 },
-}: ComponentProps): JSX.Element => {
+}: ComponentProps) => {
   const p5Sketch = useRef<HTMLDivElement | null>(null);
 
   let s = (p5: p5) => {
