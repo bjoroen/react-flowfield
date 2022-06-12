@@ -47,8 +47,6 @@ const FlowField: React.FC<ComponentProps> = ({
         partical[i] = new Partical(p5, particalColor);
       }
 
-      console.log(backgroundColor);
-
       p5.background(
         backgroundColor.R,
         backgroundColor.G,
@@ -91,7 +89,13 @@ const FlowField: React.FC<ComponentProps> = ({
   };
 
   useEffect(() => {
-    if (p5Sketch.current) new p5(s, p5Sketch.current);
+    let ignore = false;
+
+    if (p5Sketch.current && !ignore) new p5(s, p5Sketch.current);
+
+    return () => {
+      ignore = true;
+    };
   }, [p5Sketch.current]);
 
   return <div ref={p5Sketch} />;
