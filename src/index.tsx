@@ -88,8 +88,9 @@ const FlowField: React.FC<ComponentProps> = ({
     };
   };
 
+  let ignore = false; 
   useEffect(() => {
-    let ignore = false;
+   
 
     if (p5Sketch.current && !ignore) new p5(s, p5Sketch.current);
 
